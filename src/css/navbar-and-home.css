@@ -1,0 +1,138 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat,sans-serif;
+
+}
+html{
+    background-color: #f3f3f3;
+    font-size: 62.5%;
+}
+header{
+    position: sticky;
+    top: 0;
+    margin: 0px;
+    z-index: 99;
+    background-color: #f3f3f3;
+    height: 60px;
+    display: flex;
+}
+
+#navbar{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: 0px auto;
+    align-items: center;
+    font-size: 1.8rem;
+}
+ .brand-name, .navbar-navigation-list{
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;    
+}
+#navbar-navigation-lists{
+    display: flex;
+    gap: 42px;
+    list-style-type: none;
+}
+.explore-clothing-btn{
+    margin-top: 26px;
+    background-color: #000;
+    border: none;
+    border-radius: 8px;   
+}
+.explore-clothing-btn > a{
+    font-size: 1.6rem;
+    padding: 10px 14px;
+    display: inline-block;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+#home h2{
+    font-size: clamp(3.4rem, 4vw + 1rem, 5.2rem);
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1;
+}
+#home p{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.home-image{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.home-image img{
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+
+}
+.home-image-wrapper-large{
+    width: 240px !important;
+    height: 95% !important;
+    align-self: flex-end;
+}
+
+.home-image-1{
+    border-radius: 40%;
+    
+}
+.home-image-2{
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+   
+}
+.home-image-3{
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+}
+
+#home{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;  
+    width: 90%;
+    padding: 40px 0;
+}
+.home-content, .home-image{
+    width: 50%;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+
+}
+.home-image-wrapper{
+    width: 160px;
+    height: 200px;
+}
+.cart-icon svg{
+    height: 25px;
+    width: 25px;
+}
+.cart-icon{
+    position: relative;
+    cursor: pointer;
+}
+.cart-item-count{
+    font-size: 10px;
+    color: white;
+    background-color: black;
+    padding: 3px;
+    position: absolute;
+    right: 0px;
+    top: -8px;
+    border-radius: 10px;
+
+}
