@@ -2,10 +2,11 @@ import React from "react";
 import "../css/navbar-and-home.css";
 import { Link } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-function Navbar() {
+function Navbar(props) {
   const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart);
 
   return (
     <header>
@@ -47,7 +48,7 @@ function Navbar() {
               Jewelery
             </Link>
           </li>
-         
+
           <li className="navbar-navigation-list navbar-navigation-list-explore-all">
             <Link
               onClick={() => {
@@ -59,9 +60,20 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-        <div className="cart-icon">
+        <div
+          onClick={() => {
+            let cart = document.querySelector(`.shopify-cart-wrapper`);
+            cart.classList.add("shopify-cart-visible");
+
+            let storeBody = document.querySelector(`.store-area`);
+
+            storeBody.classList.add("opacity-3");
+          }}
+          className="cart-icon"
+        >
           <IoCartOutline />
-          <span className="cart-item-count">0</span>
+          <span className="cart-item-count">{cartItems.length}</span>
+
         </div>
       </nav>
     </header>
