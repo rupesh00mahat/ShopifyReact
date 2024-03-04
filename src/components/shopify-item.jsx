@@ -3,7 +3,7 @@ import "../css/shopify-store.css";
 import { useDispatch } from "react-redux";
 
 function ShopifyItem(props) {
-  const {id,  title, description, image, price, category } = props;
+  const { id, title, description, image, price, category } = props;
 
   const dispatch = useDispatch();
 
@@ -23,9 +23,13 @@ function ShopifyItem(props) {
               dispatch({
                 type: "ADD_TO_CART",
                 payload: {
-                  id, 
-                  image, title, description, price, quantity: 1
-                }
+                  id,
+                  image,
+                  title,
+                  description,
+                  price,
+                  quantity: 1,
+                },
               });
             }}
             className="add-to-cart"
