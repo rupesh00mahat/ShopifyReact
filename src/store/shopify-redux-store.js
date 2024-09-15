@@ -4,14 +4,14 @@ const INIT_VALUE = { tags: "products", displayType: "asc", cart: [] };
 
 const reducer = (store = INIT_VALUE, action) => {
   let newStore = store;
-  if (action.type == "EDIT_TAGS") {
+  if (action.type === "EDIT_TAGS") {
     newStore = { ...store, tags: action.payload };
   }
-  if (action.type == "SORT") {
+  if (action.type === "SORT") {
     console.log(action);
     newStore = { ...store, displayType: action.payload };
   }
-  if (action.type == "ADD_TO_CART") {
+  if (action.type === "ADD_TO_CART") {
     let newArray = store.cart;
     let idExists = newArray.some((item) => item.id === action.payload.id);
     if (idExists) {

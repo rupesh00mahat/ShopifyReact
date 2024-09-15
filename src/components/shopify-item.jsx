@@ -3,7 +3,7 @@ import "../css/shopify-store.css";
 import { useDispatch } from "react-redux";
 
 function ShopifyItem(props) {
-  const { id, title, description, image, price, category } = props;
+  const { id, title, description, image, price } = props;
 
   const dispatch = useDispatch();
 

@@ -1,14 +1,16 @@
-import React, {useState} from "react";
+import React from "react";
 import "../css/shopify-store.css";
 import { FaShoppingCart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Cart(props) {
   const cartItems = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
-  const [totalPrice, changeTotalPrice] = useState(0.00);
   let price = 0;
+
+  const navigate = useNavigate();
 
   return (
     <div className="shopify-cart-wrapper">
@@ -29,9 +31,10 @@ function Cart(props) {
           X
         </span>
       </div>
-      {cartItems.length == 0 && (
+      {cartItems.length === 0 && (
         <div className="shopify-cart-body">Your cart is empty : (</div>
       )}{" "}
+      <div className="shopify-cart-items">
       {cartItems.map((item, index) => {
         price = price+item.price;
         if(index === cartItems.length-1){
@@ -55,12 +58,17 @@ function Cart(props) {
           </div>
         );
       })}
+      </div>
       <div className="shopify-cart-footer">
         <div className="cart-checkout">
           <span>Checkout</span>
           <span>${price}</span>
         </div>
-        <button>Go to Checkout</button>
+        <button
+        onClick={()=>{
+          navigate("/checkout");
+        }}
+        >Go to Checkout</button>
       </div>
     </div>
   );

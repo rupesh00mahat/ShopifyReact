@@ -26,6 +26,7 @@ header{
     margin: 0px auto;
     align-items: center;
     font-size: 1.8rem;
+    z-index: 100;
 }
  .brand-name, .navbar-navigation-list{
     font-weight: 600;

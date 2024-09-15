@@ -22,9 +22,9 @@ function ShopifyItems() {
     }
     let newurl;
 
-    if (sort == "desc") {
+    if (sort === "desc") {
       newurl = url + "?sort=desc";
-    } else if (sort == "asc") {
+    } else if (sort === "asc") {
       newurl = url + "?sort=asc";
     }
     console.log(newurl);
@@ -38,6 +38,7 @@ function ShopifyItems() {
       {products.map((product, index) => {
         return (
           <ShopifyItem
+          key={`${product.title}-${index}`}
             id={product.id}
             category={product.category}
             description={product.description}

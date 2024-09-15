@@ -3,7 +3,6 @@ import Category from "./category";
 import ShopifyItems from "./shopify-items";
 import { Provider } from "react-redux";
 import store from "../store/shopify-redux-store";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 export function fetchProducts() {

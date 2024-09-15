@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden;
+}
+
 #category-area {
   width: 20%;
   padding: 10px;
@@ -92,7 +96,7 @@ img{
   width: 125px;
   height: 175px;
   transition: all .5s;
-  z-index: 10000;
+  z-index: 10;
 }
 img:hover{
   transform: translateY(-10px);
@@ -131,7 +135,7 @@ select{
   width: 35%;
   height: 100%;
   transform: translate(100%);
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 100000;
@@ -142,6 +146,9 @@ select{
 .shopify-cart-wrapper h2{
  font-size: 1.3rem;
 
+}
+.shopify-cart-wrappers{
+  overflow: scroll;
 }
 
 .shopify-cart-body{
@@ -200,6 +207,32 @@ select{
 .opacity-3{
   opacity: 0.3;
   pointer-events: none;
+
+}
+.shopify-cart-items{
+
+  overflow: scroll;
+  height: 360px;
+
+}
+.checkout-item{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #fff;
+margin: 1rem;
+border-radius: 1rem;
+padding: 1rem;
+font-size: 2rem;
+}
+.checkout-total{
+
+  margin: 5rem 0;
+}
+.checkout-item img{
+
+  height: 100px;
+  object-fit: contain;
 
 }
 .shopify-cart-item{

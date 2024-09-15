@@ -3,11 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import Home from "./components/home";
 import ShopifyStore from "./components/explore-all";
-import { createBrowserRouter, createHashRouter, HashRouter, RouterProvider } from "react-router-dom";
-import { fetchProducts } from "./components/explore-all";
-import Cart from "./components/cart";
+import {  createHashRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/shopify-redux-store";
+import Checkout from "./components/checkout";
 
 const router = createHashRouter([
   {
@@ -19,6 +18,9 @@ const router = createHashRouter([
         element: <Home />,
       },
       { path: "/shop",element: <ShopifyStore /> },
+      {
+        path: "/checkout", element: <Checkout/>
+      }
     ],
   },
 ]);
