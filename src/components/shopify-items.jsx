@@ -45,7 +45,6 @@ function ShopifyItems() {
             image={product.image}
             price={product.price}
             title={product.title}
-            key={product.id}
           />
         );
       })}
